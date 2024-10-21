@@ -1,0 +1,264 @@
+* {
+    font-family: sans-serif;
+    font-style: normal;
+}
+
+p, h1, h2, h3 {
+    margin: 0;
+    text-wrap: wrap; /*Permite que el texto se adapte al tamaño de la caja  */
+}
+
+html {
+    height: 100%;
+} 
+
+
+
+body, main {
+    margin: 0;
+    height: 100%;
+    
+}
+
+body main {
+    margin: 0 80px;
+}
+
+body main .nav-bar *:not(i) {
+    font-family: monospace, sans-serif;
+    font-style: normal;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body main .nav-bar {
+    display: flex;
+    padding-top: 5px;
+}
+
+
+
+
+
+body main .nav-bar .logotype {
+    font-size: 20px; 
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 40px;
+    color: white;
+    background-color: black;
+    padding: 2px 20px;
+    align-self: center;
+    display: flex;
+}
+
+
+
+
+body main header .options {
+    display: flex;
+    border: none;
+    margin: 0 auto;
+    
+}
+
+body main header .options a {
+    padding: 0 8px ;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    border-radius: 26px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+body main header .options a:hover {
+    background-color: #f0f0f0; 
+}
+
+
+
+
+
+body main header .buttons button {
+    transition: all 0.3s ease;
+    border-radius: 26px;
+    border: none;
+    padding: 10px;
+    cursor: pointer;   
+}
+
+body main header .buttons button:hover {
+    background-color: #e0e0e0;
+}
+
+body main header .buttons .button-icon {
+    width: 41px;
+    height: 41px;
+}
+
+body main header .buttons button i {
+    font-size: 18px;
+}
+
+
+
+
+body main .contenedor {
+    width: 55%;
+    font-size: 40px;
+    margin-top: 90px;
+    font-size: 17px;
+    display: flex; flex-direction: column;
+    font-weight: normal;
+    
+}
+
+body main .contenedor h1 {
+    margin: 10px 0px;
+    font-size: 40px;
+}
+
+.contenedor p {
+    line-height: 1.4;
+}
+
+
+.contenedor .buttons {
+    margin-top: 22px;
+}
+
+.contenedor .buttons button {
+    transition: all 0.3s ease;
+    border-radius: 26px;
+    border: none;
+    padding: 10px 12px;
+    cursor: pointer;
+    border: 2px solid black;
+}
+
+.contenedor .buttons .button-uno {
+    background-color: black;
+    color: white;
+    box-shadow: 0px 4px 8px rgba(5, 128, 5, 0.3);   
+}
+
+.contenedor .buttons .button-uno:hover {  /*Para hacer el efecto al momento de colocar el cursor */  
+    background-color: #3d3737;                                                 
+}
+
+.contenedor .buttons .button-dos {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 4px 8px rgba(5, 128, 5, 0.3);  /*Para colocar sombras */
+}
+
+.contenedor .buttons .button-dos:hover {  /*Para hacer el efecto al momento de colocar el cursor */  
+    background-color: #ece9e9;                                                       
+}
+
+
+body main h2 {
+    font-weight: bold;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-family: Open Sans, ;}
+
+
+
+
+/* Estilos para el contenedor principal */
+.contenedor-productos {
+    display: flex;
+    justify-content: space-between; /* Espacio entre los productos */
+    flex-wrap: wrap; /* Permite que los productos salten de línea si es necesario */
+    gap: 16px; /* Espacio entre productos */
+    padding: 20px;
+    max-width: 1200px; /* Ajusta el tamaño máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+/* Estilos para cada producto */
+.producto {
+    text-align: center; /* Centra la imagen y el texto dentro de cada producto */
+    width: 23%; /* Ajusta para que quepan 4 productos en una fila */
+    box-sizing: border-box; /* Asegura que el padding no rompa el layout */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(5, 128, 5, 0.3);
+}
+
+.producto:hover{
+    background-color: #e0e0e0;
+    transform: scale(1.05);
+}
+
+/* Estilos para las imágenes dentro de cada producto */
+.producto img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor de producto */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 5px; /* Borde redondeado opcional */
+    aspect-ratio: 6 / 5;
+}
+.producto img:hover {
+    transform: scale(1.0);
+}
+
+/* Estilo para el texto de descripción */
+.producto p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333; /* Ajusta el color del texto */
+}
+
+/* Estilo para el precio */
+.producto .precio {
+    display: block;
+    margin-top: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000; /* Ajusta el color del precio */
+}
+
+
+/* Responsivo para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .producto {
+        width: 48%; /* Ocupa la mitad del ancho del contenedor en pantallas pequeñas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .producto {
+        width: 100%; /* Ocupa todo el ancho en pantallas muy pequeñas */
+    }
+}
+
+div .oferta h3{
+font-size: 59px;
+margin-top: 10px;
+color: red;
+animation: parpadeo 1s infinite;
+}
+@keyframes parpadeo {
+    0% {
+      opacity: 1; /* Comienza completamente visible */
+    }
+    50% {
+      opacity: 0; /* A mitad del tiempo será invisible */
+    }
+    100% {
+      opacity: 1; /* Termina completamente visible */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
